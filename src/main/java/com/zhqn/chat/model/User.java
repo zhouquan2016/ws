@@ -1,12 +1,8 @@
 package com.zhqn.chat.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
-import javax.annotation.Generated;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 /**
  * @author 周全
@@ -14,6 +10,8 @@ import javax.persistence.GenerationType;
  * @description <p>
  */
 @Data
+@Table
+@Entity
 public class User {
 
     @Id
@@ -25,5 +23,7 @@ public class User {
     private String password;
     @Column(length = 50, nullable = false)
     private String name;
+    @Version
+    private Long version;
 
 }

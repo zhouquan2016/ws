@@ -1,8 +1,7 @@
-package com.zhqn.chat.ws;
+package com.zhqn.chat.controller;
 
 import com.zhqn.chat.service.ChatService;
 import com.zhqn.chat.ws.dto.ChatMsg;
-import com.zhqn.chat.ws.dto.SendResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

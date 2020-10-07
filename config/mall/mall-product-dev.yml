@@ -1,0 +1,48 @@
+---
+server:
+  port: 9000
+spring:
+  profiles: product1
+  application:
+    name: mall-product
+  datasource:
+    url: jdbc:mysql://192.168.80.128:3306/ws?useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      username: ws
+      password: ws
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register2:8081/eureka/,http://register2:8082/eureka/,http://register3:8083/eureka/
+
+---
+server:
+  port: 9001
+spring:
+  profiles: product2
+  application:
+    name: mall-product
+  datasource:
+    url: jdbc:mysql://192.168.80.128:3306/ws?useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      username: ws
+      password: ws
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register1:8081/eureka/
+  instance:
+    appname: mall-order
+    prefer-ip-address: true

@@ -8,7 +8,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.websocket.EncodeException;
 import javax.websocket.Session;
 import java.io.IOException;
 import java.util.Map;
